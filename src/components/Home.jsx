@@ -75,7 +75,9 @@ const Home = () => {
                         </div>
                         <div style={{opacity: toggle? 1:0}} className="flex flex-col gap-1">
                             {options.map((op)=>(
-                                <div className="border text-green-300 border-white rounded-3xl px-5 py-2 cursor-pointer hover:bg-cyan-950" onClick={()=>setPriority(op)}>
+                                <div className={`border text-green-300 border-white rounded-3xl px-5 py-2 cursor-pointer hover:bg-cyan-950 ${priority==op?"bg-cyan-950":"transparent"}`} onClick={()=> {setPriority(op)
+                                    console.log(priority)
+                                }}>
                                     {op}
                                 </div>
                                 )
